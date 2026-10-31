@@ -71,7 +71,13 @@ input{width:100%;background:#111;border:1px solid var(--line);color:var(--ink);p
  <div class="panel" id="quizPanel"><div class="tag" id="quizCount">Question 1 of 5</div><div class="progress"><span id="quizProgress"></span></div><div class="question" id="quizQuestion"></div><div class="answers" id="quizAnswers"></div><div class="feedback" id="quizFeedback"></div><button class="primary" id="nextQuestion" style="display:none;margin-top:18px" onclick="nextQuiz()">Next question</button></div>
 </section>
 </main>
-<footer>HIDDEN TRUTHS · QUESTION EVERYTHING · FOLLOW THE EVIDENCE</footer>
+<footer>
+  HIDDEN TRUTHS · QUESTION EVERYTHING · FOLLOW THE EVIDENCE
+  <br>
+  <a href="https://www.instagram.com/deep_12_19_99/" target="_blank" rel="noopener noreferrer">
+    Follow us on Instagram 📸
+  </a>
+</footer>
 <script>
 const pages=['home','cases','stories','puzzles','quiz'];
 function showPage(page){pages.forEach(p=>document.getElementById(p).classList.toggle('active',p===page));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));document.getElementById('hero').style.display=page==='home'?'flex':'none';window.scrollTo({top:0,behavior:'smooth'});if(page==='quiz')startQuiz();refreshStats();}
